@@ -2,10 +2,20 @@
 <aside>
 	<div class="aside">
 		<figure>
-			<image src="../../public/images/Usuario.jpg" width="25"/>
+			<image src="http://localhost/Frontend/public/images/Usuario.jpg" width="25"/>
 		</figure>
-		<p>Nombre</p>
-		<p>correo</p>
+		<h2>Bienvenid@: <i>
+
+				<?php 
+				if(isset($nombre)){
+					echo $nombre;
+				}?>
+					
+				</i></h2>
+		<p><?php 
+				if(isset($correo)){
+					echo $correo;
+				}?></p>
 	</div>
 	<p>Secion de navegacion</p>
 	<ul>

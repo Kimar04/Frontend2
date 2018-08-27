@@ -5,6 +5,9 @@
 }
 body{
 	width:100%;
+	background-color:#CCC;
+	font-family:dotum, Yu Gothic Light, gulim, consolas, MS Sans Serif,cordia new, arial,dotum;
+	color:#FFF;
 }
 header{
 	background-color:#005386;
@@ -22,20 +25,26 @@ figure{
 nav{
 	display:table;
 	width:84%;
-	height:80px;
+	height:60px;
 	float:right;
+	background-color:#005386;
 }
 nav a {
 	display:table-cell;
 	vertical-align: middle;
-    color: #FFF;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     font-size:1.8em;
     
 }
-nav a:hover{border:2px solid #572364;}
+nav a:hover,focus{
+	background-color:#EEFB54;
+	color:#088A08;
+}
+nav a:visited{
+color:#DF7401;
+}
 nav form{
 	display:flex;
 	flex-wrap:wrap;
@@ -57,15 +66,18 @@ nav button{
 	background-color:#EEFB54;
 	color:#088A08;
 }
-section{background-color:#AFAEB0;
+section{
+		background-color:#AFAEB0;
 		display:flex;
 		flex-wrap:wrap;
 	    height:600px;}
 article{
 	background-color:transparent;
 	display:inline-block;
-	flex-wrap:wrap;
 	height:auto;
+}
+form input{
+	color:#000;
 }
 div a{
 	font-size: 2em;
@@ -83,22 +95,6 @@ select{
 }
 article form{
 	margin-left:10%;
-}
-.form-inicio fieldset{
-	height:400px;
-	width:90%;
-	margin-top:-60px;
-	background-color:#572364;
-	border-radius: 3em 1.5em;
-	font-size:1.5em;
-	color:#FFF;
-}
-.form-inicio fieldset form button{
-	font-size:1.5em;
-	margin:8px;
-	padding:4px;
-	background-color:#EEFB54;
-	color:#088A08;
 }
  article label, input{
 	color:#FFF;
@@ -142,13 +138,6 @@ article div{
 	height:auto;
 	margin-left:5%;
 }
-.form-inicio{
-	padding-top:70px;
-	width:40%;
-	display:flex;
-	flex-wrap:wrap;
-	height:600px;
-}
 .inicio{
 	width:20%;
 	margin:0 auto;
@@ -164,6 +153,29 @@ display:table;
 .inicio div a{
 	display:table-cell;
 	vertical-align:middle;
+}
+.form-inicio{
+	padding-top:70px;
+	width:40%;
+	display:flex;
+	flex-wrap:wrap;
+	height:600px;
+}
+.form-inicio fieldset{
+	height:400px;
+	width:90%;
+	margin-top:-60px;
+	background-color:#572364;
+	border-radius: 3em 1.5em;
+	font-size:1.5em;
+	color:#FFF;
+}
+.form-inicio fieldset form button{
+	font-size:1.5em;
+	margin:8px;
+	padding:4px;
+	background-color:#EEFB54;
+	color:#088A08;
 }
 footer{
 	background-color:#000;
@@ -195,6 +207,142 @@ footer{
 	vertical-align:middle;
 	height:158px;
 	text-align:center;
+}
+/*Formulario de contacto*/
+.contact{
+ 	display:flex;
+ 	flex-wrap:wrap;
+    background-color:#088A08;
+    text-align:justify;
+    height:auto;
+	width:100%;
+        }
+        .contact fieldset{
+   margin:0 auto;
+	background-color:#572364;
+	border-radius: 3em 1.5em;
+	font-size:1em;
+	color:Ivory;
+	text-align:center; 
+        }
+        .contact legend{
+        	font-size:1.2em;
+        	font-weight:2em;
+        }
+.contact p{
+	font-weight: bold;
+    	}
+.contact label{
+	width:40%;
+	float:left;
+          text-align: right;
+          color: Ivory;}
+.contact p select{
+background-color:#005386;
+	color:Ivory;
+}
+.contact p select:hover{
+	background-color:#EEFB54;
+	color:#088A08;
+}
+.contact p input{
+	border: 2% bold #EEFB54;
+	background-color:#005386;
+	color:Ivory;
+	margin:2px;
+	font-size:1em;
+	min-width:150px;
+	float:left;
+}
+.contact p input:focus{
+	background-color:#EEFB54;
+	color:#088A08;
+}
+}
+.contact option{
+	background-color:#005386;
+	color:Ivory;
+}
+.contact option:focus{
+background-color:#EEFB54;
+	color:#088A08;
+}
+        	
+    .contact p button{
+	font-size:1.5em;
+	margin:2px;
+	padding:2px;
+	background-color:#EEFB54;
+	color:#088A08;
+}
+.login{
+ 	display:flex;
+ 	flex-wrap:wrap;
+    background-color:#088A08;
+    text-align:justify;
+    height:500px;
+	width:50%;
+	margin:auto;
+}
+   .login fieldset{
+   margin:0 auto;
+	background-color:#572364;
+	border-radius: 3em 1.5em;
+	font-size:1em;
+	text-align:center;
+	height:40%; 
+	width:90%;
+	display:block;
+        }
+    .login legend{
+        	font-size:1.2em;
+        	font-weight:2em;
+        }
+.login p{
+	font-weight: bold;
+    	}
+.login label{
+	width:40%;
+	float:left;
+          text-align: right;
+          color: Ivory;}
+.login p select{
+background-color:#005386;
+	color:Ivory;
+}
+.login p select:hover{
+	background-color:#EEFB54;
+	color:#088A08;
+}
+.login  p input{
+	border: 2% bold #EEFB54;
+	background-color:#005386;
+	color:Ivory;
+	margin:2px;
+	font-size:1em;
+	min-width:150px;
+	float:left;
+}
+.login  p input:focus{
+	background-color:#EEFB54;
+	color:#088A08;
+}
+}
+.login  option{
+	background-color:#005386;
+	color:Ivory;
+}
+.login option:focus{
+background-color:#EEFB54;
+	color:#088A08;
+}
+        	
+   .login p button{
+	font-size:1.5em;
+	margin:2px;
+	padding:2px;
+	background-color:#EEFB54;
+	color:#088A08;
 }
 @media screen and (min-width:600px) and (max-width:1024px){
 	header{
@@ -251,36 +399,27 @@ width:50%;
 }
 .inicio-maps iframe{
 }
-.form-inicio{
-	width:100%;
-	margin:0 auto;
-	display:inline-block;
-	text-align:center;
-	padding:0;
-	float:right;
-}
-.form-inicio form{
-width: 100%;
-margin:0 auto;
-border:2px solid #99F;
-padding:50px 20px 50px 20px;
-background-color:#129;
-}
+
 .inicio{
 	width:50%;
 }
 .inicio div{
-	width:100%;
-	height:190px;
-	display:inline-block;
+	width:80%;
+	height:90px;
 	margin:0 auto;
 }
-.colum1{
-	width:50%;
+.form-inicio form{
+width: 100%;
+height:auto;
+margin:0 auto;
 }
-	.maps{
-		height:380px;
-	}
+.form-inicio{
+	width:100%;
+	margin:0 auto;
+	display:block;
+	text-align:center;
+	padding:0;
+}
 select{
 	font-size:1.5em;
 }
@@ -298,7 +437,7 @@ input{
 	width:50%;
 }
 .colum2 div{
-	height:185px;
+	height:85px;
 	display:table;
 	border-radius: 2.5%;
 }
@@ -418,9 +557,8 @@ display:block;
 	display:block;
 }
 .inicio div{
-	width:100%;
-	background-color:#A0F;
-height:160px;
+	width:90%;
+height:80px;
 border-radius: 2em;
 margin-top:15px;
 }

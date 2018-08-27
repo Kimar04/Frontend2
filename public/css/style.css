@@ -26,12 +26,12 @@ nav a:hover,focus{
 	background-color:#EEFB54;
 	color:#088A08;
 }
-nav form{
-	display:inline-block;
-	float:right;
-	margin-right:30px;
+nav a:visited{
+color:#DF7401;
 }
-nav select{
+nav form{
+	display:flex;
+	flex-wrap:wrap;
 	float:right;
 	margin-right:30px;
 }
@@ -78,13 +78,15 @@ aside ul li{
 	color:#088A08;
 }
 section{
+	background-color:#AFAEB0;
 	display:wrap;
 	width:80%;
 	float:right;
 	margin-left:0.5%;
 }
 section article{
-	display:flex-wrap;
+	display:flex;
+	flex-wrap:wrap;
 }
 section article div{
 	display:inline-block;
@@ -147,74 +149,7 @@ section article figure{
 .cbox7{
 	background-color:#F50A00;
 }
-/*Formulario de contacto*/
-.contact{
- 	display:flex;
- 	flex-wrap:wrap;
-    background-color:#088A08;
-    color:#fff;
-    text-align:justify;
-    height:auto;
-	width:100%;
-        }
-        .contact fieldset{
-   margin:0 auto;
-	background-color:#572364;
-	border-radius: 3em 1.5em;
-	font-size:1em;
-	color:Ivory;
-	text-align:center; 
-        }
-        .contact legend{
-        	font-size:1.2em;
-        	font-weight:2em;
-        }
-.contact p{
-	font-weight: bold;
-    	}
-.contact label{
-	width:40%;
-	float:left;
-          text-align: right;
-          color: Ivory;}
-.contact p select{
-background-color:#005386;
-	color:Ivory;
-}
-.contact p select:hover{
-	background-color:#EEFB54;
-	color:#088A08;
-}
-.contact p input{
-	border: 2% bold #EEFB54;
-	background-color:#005386;
-	color:Ivory;
-	margin:2px;
-	font-size:1em;
-	min-width:150px;
-	float:left;
-}
-.contact p input:focus{
-	background-color:#EEFB54;
-	color:#088A08;
-}
-}
-.contact option{
-	background-color:#005386;
-	color:Ivory;
-}
-.contact option:focus{
-background-color:#EEFB54;
-	color:#088A08;
-}
-        	
-    .contact p button{
-	font-size:1.5em;
-	margin:2px;
-	padding:2px;
-	background-color:#EEFB54;
-	color:#088A08;
-}
+
 @media screen and (min-width:600px) and (max-width:1024px){
 nav{ 
 height:60px;

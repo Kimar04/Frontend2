@@ -1,80 +1,55 @@
 <?php
+//Mensaje 
+if(isset($_POST['btn_cont'])){
+	$solicitud = $_POST['solicitud'];
+	$nombre_cont = $_POST['nombre_cont'];
+	$apellidos_cont = $_POST['correo_cont'];
+	$correo_cont = $_POST['correo_cont'];
+	if ($solicitud == '--selecionar--'){
+		header('Location: http://localhost/Frontend/index.php?error=3');
+	}
+
+	if(isset($correo_cont)){
+
+	header('Location: http://localhost/Frontend/index.php');
+	}
+}
 
 //seccion de login
 if(isset($_POST['btn-register'])){
 
-	$genre = $_POST['genre'];
 	$nombre = $_POST['nombre'];
 	$correo = $_POST['correo'];
 	$password = $_POST['password'];
 	$conf_pass = $_POST['conf_pass'];
 
-	//Validar el genero
-	if ($genre == 'genero') {
-		//error 3 = 'Debe seleccionar un genero!'
-		header('Location: http://localhost/webmail/index.php?error=3');
-	}
-
 	if($conf_pass == $password){
 
-		include ('../../../views/front/login.php');
+		include('../../../views/front/forms/login.php');
 	}
 	else{
 		//error 1 = 'Las contraseñas no coinciden!'
-		header('Location: http://localhost/webmail/index.php?error=1');
+		header('Location: http://localhost/Frontend/index.php?error=1');
 	}
 }
 
 //area de usuarios registrados
 if(isset($_POST['btn-login'])){
 
-	$genre = $_POST['genre'];
+	
+	$correo_log = $_POST['correo_log'];
+	$password_log = $_POST['password_log'];
 	$nombre = $_POST['nombre'];
 	$correo = $_POST['correo'];
 	$password = $_POST['password'];
-	$correo_log = $_POST['correo_log'];
-	$pass_log = $_POST['pass_log'];
 
-	if($correo_log == $correo && $pass_log == $password){
+	if($correo_log == $correo && $password_log == $password){
 
-		include ('../../../views/admin/index.php');
+		include('../../../views/admin/index.php');
 	}
 	else{
 		//error 2 = 'Los datos de acceso no coinciden!'
-		header('Location: http://localhost/webmail/index.php?error=2');
+		header('Location: http://localhost/Frontend/index.php?error=2');
 	}
 }
-
-//Mensaje enviado
-if(isset($_POST['btn-msg'])){
-
-	$genre = $_POST['genre'];
-	$nombre = $_POST['nombre'];
-	$correo = $_POST['correo'];
-	$dest_msg = $_POST['dest_msg'];
-	$asunto_msg = $_POST['asunto_msg'];
-	$msg = $_POST['msg'];
-
-	if(isset($dest_msg)){
-
-		include ('../../../views/admin/inbox.php');
-	}
-}
-
-//Leer mensaje
-if(isset($_POST['btn-read'])){
-
-	$genre = $_POST['genre'];
-	$nombre = $_POST['nombre'];
-	$correo = $_POST['correo'];
-	$dest_msg = $_POST['dest_msg'];
-	$asunto_msg = $_POST['asunto_msg'];
-	$msg = $_POST['msg'];
-
-	if(isset($dest_msg)){
-
-		include ('../../../views/admin/read.php');
-	}
-}
-
 ?>
